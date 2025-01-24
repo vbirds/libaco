@@ -20,9 +20,13 @@
 #include <limits.h>
 #include <stdlib.h>
 #include <stdio.h>
+#if !defined(_MSC_VER)
 #include <unistd.h>
+#endif
 #include <time.h>
+#if !defined(_MSC_VER)
 #include <sys/mman.h>
+#endif
 
 #ifdef ACO_USE_VALGRIND
     #include <valgrind/valgrind.h>
